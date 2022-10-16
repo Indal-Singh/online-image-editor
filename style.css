@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');
+
+:root {
+    --var-color: #e34645;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+}
+
+.container.disable:where(.editorBox, ) {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+.container.disable .editor-panel,
+.container.disable .editorBox,
+.container.disable #save {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+    background: rgb(224, 241, 245);
+}
+
+.main-box {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    height: 500px;
+    box-shadow: 0px 0px 10px 0px #ccc;
+}
+
+.img-box {
+    width: 60%;
+    height: 70%;
+    max-width: 555px;
+    max-height: 358px;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.editor-controls {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+.button-class {
+    background: none;
+    width: 120px;
+    color: var(--var-color);
+    margin: 5px;
+    padding: 5px;
+    transition: 1s;
+}
+
+.button-class:hover {
+    background: var(--var-color);
+    color: #fff;
+}
+
+.active {
+    background: var(--var-color);
+    color: #fff;
+}
+
+.filters {
+    padding: 10px;
+}
+
+.slider input {
+    width: 100%;
+    height: 5px;
+    accent-color: var(--var-color);
+    cursor: pointer;
+}
+
+.filter-info {
+    height: 10px;
+}
+
+.options button {
+    width: 55px;
+    border: 1px solid rgb(94, 93, 93);
+}
+
+#reset {
+    border: 1px solid #000000;
+}
+
+@media only screen and (max-width: 1200px) {
+    .button-class {
+        width: 90px;
+    }
+
+    .options button {
+        width: 40px;
+
+    }
+}
+
+
+@media only screen and (max-width: 995px) {
+    .option {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .main-box {
+        height: auto;
+    }
+
+    .button-class {
+        width: 90px;
+    }
+
+    .options button {
+        width: 45px;
+    }
+
+    .img-box {
+        margin: 10 0px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 355px) {
+    .button-class {
+        width: 100%;
+    }
+}
